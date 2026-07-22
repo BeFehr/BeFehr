@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Be Fehr Clinic | Whole-Person Mental Health Care</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Playfair Display for elegant, moody headers. Montserrat for clean DTC app body copy. -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            bg: '#0a0a0a',         // True dark background
+                            surface: '#151515',    // Slightly lighter for cards
+                            olive: '#1B2419',      // Dark IG post green
+                            plum: '#2A1820',       // Dark IG post plum
+                            gold: '#C5A059',       // Elegant accent gold
+                            cream: '#F4F0E9',      // Light text
+                            tan: '#D1C8B4',        // Muted text
+                            border: '#2a2a2a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #F4F0E9;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Hide scrollbar for a cleaner app feel */
+        ::-webkit-scrollbar { display: none; }
+        * { -ms-overflow-style: none; scrollbar-width: none; }
+        .tap-highlight-transparent { -webkit-tap-highlight-color: transparent; }
+
+        /* Image Masking */
+        .arch-mask {
+            border-top-left-radius: 9999px;
+            border-top-right-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="font-sans flex flex-col min-h-screen">
+
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 bg-brand-bg/95 backdrop-blur-xl border-b border-white/5">
+        <div class="container mx-auto px-6 py-5 max-w-[1200px] flex justify-between items-center">
+            
+            <a href="#" class="flex flex-col group tap-highlight-transparent">
+                <h1 class="font-serif font-bold text-2xl tracking-[0.1em] leading-none text-brand-cream uppercase">Be Fehr</h1>
+                <p class="text-[0.65rem] tracking-[0.25em] font-medium text-brand-gold uppercase mt-1">Clinic</p>
+            </a>
+            
+            <div class="hidden lg:flex items-center gap-8 font-sans font-medium text-xs uppercase tracking-[0.15em] text-brand-cream/80">
+                <a href="#services" class="hover:text-brand-gold transition-colors">Care & Services</a>
+                <a href="#about" class="hover:text-brand-gold transition-colors">About</a>
+                <a href="#quiz-section" class="border border-brand-gold text-brand-gold px-6 py-3 rounded-full hover:bg-brand-gold hover:text-brand-bg transition-all">Take The Quiz</a>
+            </div>
+            
+            <button class="lg:hidden text-brand-gold p-2 tap-highlight-transparent">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+
+        <!-- Hero Section -->
+        <section class="relative pt-16 pb-24 lg:pb-32 overflow-hidden bg-brand-bg">
+            <div class="container mx-auto px-6 max-w-[1200px] relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <div class="lg:col-span-6 z-20 pt-8">
+                    <p class="font-sans text-brand-gold text-[0.7rem] tracking-[0.3em] font-bold uppercase mb-6 flex items-center gap-4">
+                        <span class="w-8 h-[1px] bg-brand-gold"></span>
+                        Whole-Person Care
+                    </p>
+                    
+                    <h2 class="font-serif text-5xl md:text-7xl text-brand-cream leading-[1.1] mb-6">
+                        Real change.<br>
+                        <span class="italic text-brand-gold font-light">Deeper healing.</span>
+                    </h2>
+                    
+                    <p class="font-sans text-brand-tan/80 text-lg mb-10 max-w-md leading-relaxed font-light">
+                        Expert therapy, psychiatric care, and innovative treatments designed to treat the root, not just the symptoms. Create a life you actually want to live.
+                    </p>
+                    
+                    <a href="#quiz-section" class="inline-flex items-center justify-center bg-brand-gold text-brand-bg px-8 py-4 rounded-full font-sans font-bold hover:bg-brand-cream transition-all gap-3 text-sm tracking-widest uppercase tap-highlight-transparent">
+                        Build Your Care Plan 
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <div class="lg:col-span-6 relative h-[500px] lg:h-[650px] flex justify-center items-end mt-8 lg:mt-0">
+                    <!-- Decorative Luxe Shapes behind the image -->
+                    <div class="absolute bottom-4 right-4 w-[75%] h-[95%] bg-brand-plum arch-mask pointer-events-none opacity-80"></div>
+                    <div class="absolute top-[10%] left-[5%] w-32 h-32 bg-brand-olive rounded-full z-0 opacity-90"></div>
+                    
+                    <!-- Bulletproof Dark Botanical Image Container -->
+                    <div class="relative w-[85%] h-[90%] arch-mask overflow-hidden border border-brand-gold/30 z-10 bg-[#121810] shadow-2xl">
+                        <!-- Guaranteed dark tropical leaf photo from Unsplash without heavy darkening overlays -->
+                        <img 
+                            src="https://images.unsplash.com/photo-1508500259850-2529ab8ecfb9?q=80&w=2000&auto=format&fit=crop" 
+                            alt="Moody dark tropical monstera leaves" 
+                            class="w-full h-full object-cover"
+                            onerror="this.src='https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?q=80&w=2000&auto=format&fit=crop';"
+                        >
+                        <!-- Gentle bottom gradient to blend into background, no mix-blend modes that break visibility -->
+                        <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-brand-bg to-transparent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Pillars Section -->
+        <section id="services" class="relative z-20 py-24 bg-[#0d0d0d] border-t border-white/5">
+            <div class="container mx-auto px-6 max-w-[1200px]">
+                
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div>
+                        <h3 class="font-serif text-3xl md:text-5xl text-brand-cream mb-4">Healing isn't one-size-fits-all.<br><span class="italic text-brand-gold font-light">Neither is our approach.</span></h3>
+                        <p class="font-sans text-brand-tan/60 max-w-lg font-light leading-relaxed">From foundational counseling to advanced psychiatric treatments, we build a comprehensive care plan around you.</p>
+                    </div>
+                </div>
+
+                <!-- The 4 Core Pillars -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Pillar 1: Therapy -->
+                    <div class="bg-brand-surface border border-brand-border p-8 rounded-2xl flex flex-col h-[420px] group hover:border-brand-gold/50 transition-all cursor-pointer" onclick="document.getElementById('quiz-section').scrollIntoView();">
+                        <div class="w-12 h-12 mb-6 text-brand-gold bg-brand-gold/10 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </div>
+                        <h3 class="font-sans font-bold tracking-widest uppercase text-brand-cream text-xs mb-2">Pillar 01</h3>
+                        <p class="font-serif text-brand-gold text-2xl mb-4">Therapy & EMDR</p>
+                        <p class="font-sans text-[0.9rem] text-brand-tan/70 flex-grow leading-relaxed font-light">Individual counseling tailored to your needs. Expert support for anxiety, depression, trauma processing (EMDR), relationships, and life transitions.</p>
+                        <div class="pt-6 border-t border-white/5 mt-auto flex items-center text-brand-gold text-xs font-bold uppercase tracking-wider group-hover:translate-x-2 transition-transform">
+                            Explore Therapy <span class="ml-2">→</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 2: Spravato -->
+                    <div class="bg-brand-plum border border-brand-border p-8 rounded-2xl flex flex-col h-[420px] group hover:border-brand-gold/50 transition-all cursor-pointer" onclick="document.getElementById('quiz-section').scrollIntoView();">
+                        <div class="w-12 h-12 mb-6 text-brand-gold bg-brand-gold/10 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                        </div>
+                        <h3 class="font-sans font-bold tracking-widest uppercase text-brand-cream text-xs mb-2">Pillar 02</h3>
+                        <p class="font-serif text-brand-gold text-2xl mb-4">Psychiatry & Spravato®</p>
+                        <p class="font-sans text-[0.9rem] text-brand-tan/70 flex-grow leading-relaxed font-light">Expert medication management and Spravato® (esketamine) treatment. A new, clinically-proven path forward for treatment-resistant depression (TRD).</p>
+                        <div class="pt-6 border-t border-white/5 mt-auto flex items-center text-brand-gold text-xs font-bold uppercase tracking-wider group-hover:translate-x-2 transition-transform">
+                            Learn More <span class="ml-2">→</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 3: Groups -->
+                    <div class="bg-brand-olive border border-brand-border p-8 rounded-2xl flex flex-col h-[420px] group hover:border-brand-gold/50 transition-all cursor-pointer" onclick="document.getElementById('quiz-section').scrollIntoView();">
+                        <div class="w-12 h-12 mb-6 text-brand-gold bg-brand-gold/10 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </div>
+                        <h3 class="font-sans font-bold tracking-widest uppercase text-brand-cream text-xs mb-2">Pillar 03</h3>
+                        <p class="font-serif text-brand-gold text-2xl mb-4">Groups & Community</p>
+                        <p class="font-sans text-[0.9rem] text-brand-tan/70 flex-grow leading-relaxed font-light">Supportive group experiences designed to build authentic connection and create change. Featuring our specialized "Hidden Patterns" program.</p>
+                        <div class="pt-6 border-t border-white/5 mt-auto flex items-center text-brand-gold text-xs font-bold uppercase tracking-wider group-hover:translate-x-2 transition-transform">
+                            Find a Group <span class="ml-2">→</span>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 4: Wellness & Testing -->
+                    <div class="bg-[#1A110E] border border-brand-border p-8 rounded-2xl flex flex-col h-[420px] group hover:border-brand-gold/50 transition-all cursor-pointer" onclick="document.getElementById('quiz-section').scrollIntoView();">
+                        <div class="w-12 h-12 mb-6 text-brand-gold bg-brand-gold/10 rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="font-sans font-bold tracking-widest uppercase text-brand-cream text-xs mb-2">Pillar 04</h3>
+                        <p class="font-serif text-brand-gold text-2xl mb-4">Wellness + Testing</p>
+                        <p class="font-sans text-[0.9rem] text-brand-tan/70 flex-grow leading-relaxed font-light">Whole-person wellness, confidential STI/HIV testing, PrEP support, and compassionate guidance for every step of your journey. Coordinated through our in-house PharmCo.</p>
+                        <div class="pt-6 border-t border-white/5 mt-auto flex items-center text-brand-gold text-xs font-bold uppercase tracking-wider group-hover:translate-x-2 transition-transform">
+                            Learn More <span class="ml-2">→</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Fully Functional Diagnostic Quiz Section -->
+        <section id="quiz-section" class="py-24 bg-brand-bg relative min-h-[850px] flex items-center border-t border-brand-border">
+            
+            <!-- Soft glowing background effect -->
+            <div class="absolute inset-0 flex justify-center items-center pointer-events-none overflow-hidden">
+                <div class="w-[600px] h-[600px] bg-brand-gold/5 rounded-full blur-[100px]"></div>
+            </div>
+
+            <div class="container mx-auto px-6 max-w-[700px] relative z-10">
+                
+                <div class="text-center mb-10">
+                    <p class="font-sans text-brand-gold text-[0.7rem] tracking-[0.3em] font-bold uppercase mb-4">Diagnostic Intake</p>
+                    <h2 class="font-serif text-4xl lg:text-5xl text-brand-cream mb-4">Build Your Care Plan</h2>
+                </div>
+
+                <!-- The Master Quiz Container -->
+                <div class="bg-brand-surface rounded-[2rem] shadow-2xl border border-brand-border overflow-hidden relative flex flex-col min-h-[600px]">
+                    
+                    <!-- Progress Bar -->
+                    <div class="h-1.5 w-full bg-[#222]">
+                        <div id="quiz-progress" class="h-full bg-brand-gold w-[16%] transition-all duration-500 ease-out"></div>
+                    </div>
+
+                    <!-- Steps Container -->
+                    <div class="relative flex-grow">
+                        
+                        <!-- Step 1: Goals / Triage -->
+                        <div id="quiz-step-1" class="absolute inset-0 p-8 md:p-12 transition-all duration-400 ease-out z-10 opacity-100 translate-x-0">
+                            <p class="text-brand-tan/50 text-xs font-bold tracking-widest uppercase mb-4">Step 1 of 5</p>
+                            <h3 class="font-serif text-3xl text-brand-cream mb-8">What is your primary focus today?</h3>
+                            
+                            <div class="space-y-3">
+                                <button onclick="selectOption(this, 1, 2, 'focus', 'Anxiety & Mood')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <span class="font-sans text-brand-cream font-medium">Anxiety, depression, or mood</span>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center indicator"></div>
+                                </button>
+                                <button onclick="selectOption(this, 1, 2, 'focus', 'Trauma')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <span class="font-sans text-brand-cream font-medium">Processing trauma (PTSD / EMDR)</span>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center indicator"></div>
+                                </button>
+                                <button onclick="selectOption(this, 1, 2, 'focus', 'Testing & Wellness')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <span class="font-sans text-brand-cream font-medium">Testing (STI/HIV), PrEP, or General Wellness</span>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center indicator"></div>
+                                </button>
+                                <button onclick="selectOption(this, 1, 2, 'focus', 'Relationship')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <span class="font-sans text-brand-cream font-medium">Relationship or life transition support</span>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 flex items-center justify-center indicator"></div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Severity (Clinical Triage) -->
+                        <div id="quiz-step-2" class="absolute inset-0 p-8 md:p-12 transition-all duration-400 ease-out z-0 opacity-0 pointer-events-none translate-x-8">
+                            <button onclick="goToStep(1, 2)" class="text-brand-tan/50 hover:text-brand-gold text-xs font-bold uppercase tracking-widest mb-6 flex items-center gap-2 transition-colors">
+                                <span>←</span> Back
+                            </button>
+                            <h3 class="font-serif text-3xl text-brand-cream mb-8">How much is this impacting your daily life?</h3>
+                            
+                            <div class="space-y-3">
+                                <button onclick="selectOption(this, 2, 3, 'severity', 'Mild')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <span class="font-sans text-brand-cream font-medium">Mildly - I'm functioning but want support</span>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 indicator"></div>
+                                </button>
+                                <button onclick="selectOption(this, 2, 3, 'severity', 'Moderate')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <span class="font-sans text-brand-cream font-medium">Moderately - It's making daily tasks difficult</span>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 indicator"></div>
+                                </button>
+                                <button onclick="selectOption(this, 2, 3, 'severity', 'Severe')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <span class="font-sans text-brand-cream font-medium">Severely - I'm struggling to get through the day</span>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 indicator"></div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Treatment History (TRD / Spravato Identifier) -->
+                        <div id="quiz-step-3" class="absolute inset-0 p-8 md:p-12 transition-all duration-400 ease-out z-0 opacity-0 pointer-events-none translate-x-8">
+                            <button onclick="goToStep(2, 3)" class="text-brand-tan/50 hover:text-brand-gold text-xs font-bold uppercase tracking-widest mb-6 flex items-center gap-2 transition-colors">
+                                <span>←</span> Back
+                            </button>
+                            <h3 class="font-serif text-3xl text-brand-cream mb-8">Have you tried treatments for this in the past?</h3>
+                            
+                            <div class="space-y-3">
+                                <button onclick="selectOption(this, 3, 4, 'history', 'First time')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <span class="font-sans text-brand-cream font-medium">No, this is my first time seeking help</span>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 indicator"></div>
+                                </button>
+                                <button onclick="selectOption(this, 3, 4, 'history', 'Therapy only')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <span class="font-sans text-brand-cream font-medium">I've tried therapy/counseling</span>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 indicator"></div>
+                                </button>
+                                <button onclick="selectOption(this, 3, 4, 'history', 'Meds and Therapy')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <span class="font-sans text-brand-cream font-medium">I've tried 2+ medications and they aren't working (TRD)</span>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 indicator"></div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Format Preferences -->
+                        <div id="quiz-step-4" class="absolute inset-0 p-8 md:p-12 transition-all duration-400 ease-out z-0 opacity-0 pointer-events-none translate-x-8">
+                            <button onclick="goToStep(3, 4)" class="text-brand-tan/50 hover:text-brand-gold text-xs font-bold uppercase tracking-widest mb-6 flex items-center gap-2 transition-colors">
+                                <span>←</span> Back
+                            </button>
+                            <h3 class="font-serif text-2xl md:text-3xl text-brand-cream mb-4">How would you prefer to receive care?</h3>
+                            <p class="font-sans text-sm text-brand-tan/60 mb-8 font-light">Certain treatments, like Spravato® or Testing, require in-clinic visits.</p>
+                            
+                            <div class="space-y-3">
+                                <button onclick="selectOption(this, 4, 5, 'format', 'In-Person')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <div>
+                                        <span class="block font-sans text-brand-cream font-medium mb-1">In-Person (Fort Lauderdale)</span>
+                                        <span class="block font-sans text-xs text-brand-tan/50">Visit our comfortable, confidential clinic</span>
+                                    </div>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 indicator"></div>
+                                </button>
+                                <button onclick="selectOption(this, 4, 5, 'format', 'Virtual')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <div>
+                                        <span class="block font-sans text-brand-cream font-medium mb-1">Virtual / Telehealth</span>
+                                        <span class="block font-sans text-xs text-brand-tan/50">Secure video sessions from home</span>
+                                    </div>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 indicator"></div>
+                                </button>
+                                <button onclick="selectOption(this, 4, 5, 'format', 'Hybrid')" class="w-full bg-brand-bg border border-brand-border p-5 rounded-xl text-left hover:border-brand-gold/50 flex items-center justify-between group transition-colors">
+                                    <div>
+                                        <span class="block font-sans text-brand-cream font-medium mb-1">Hybrid (Mix of both)</span>
+                                        <span class="block font-sans text-xs text-brand-tan/50">The best of both worlds</span>
+                                    </div>
+                                    <div class="w-5 h-5 rounded-full border border-white/20 indicator"></div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Contact Capture -->
+                        <div id="quiz-step-5" class="absolute inset-0 p-8 md:p-12 transition-all duration-400 ease-out z-0 opacity-0 pointer-events-none translate-x-8">
+                            <button onclick="goToStep(4, 5)" class="text-brand-tan/50 hover:text-brand-gold text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2 transition-colors">
+                                <span>←</span> Back
+                            </button>
+                            <h3 class="font-serif text-3xl text-brand-cream mb-2">Let's build your plan.</h3>
+                            <p class="font-sans text-brand-tan/60 text-sm mb-8 font-light">Where should our clinical intake team send your recommended care strategy?</p>
+                            
+                            <div class="space-y-4 mb-8">
+                                <input type="text" id="intake-name" placeholder="First & Last Name" class="w-full bg-brand-bg border border-brand-border rounded-xl px-5 py-4 focus:outline-none focus:border-brand-gold font-sans text-sm text-brand-cream transition-colors placeholder:text-brand-tan/30">
+                                <input type="email" id="intake-email" placeholder="Email Address" class="w-full bg-brand-bg border border-brand-border rounded-xl px-5 py-4 focus:outline-none focus:border-brand-gold font-sans text-sm text-brand-cream transition-colors placeholder:text-brand-tan/30">
+                                <input type="tel" id="intake-phone" placeholder="Phone Number" class="w-full bg-brand-bg border border-brand-border rounded-xl px-5 py-4 focus:outline-none focus:border-brand-gold font-sans text-sm text-brand-cream transition-colors placeholder:text-brand-tan/30">
+                            </div>
+
+                            <button id="submit-btn" onclick="submitQuiz()" class="w-full bg-brand-gold text-brand-bg px-6 py-4 rounded-xl font-sans font-bold hover:bg-brand-cream transition-colors text-sm tracking-widest uppercase shadow-lg shadow-brand-gold/20 flex justify-center items-center">
+                                Analyze My Profile
+                            </button>
+                        </div>
+
+                        <!-- Step 6: Dynamic Success State -->
+                        <div id="quiz-step-6" class="absolute inset-0 p-8 md:p-12 transition-all duration-400 ease-out z-0 opacity-0 pointer-events-none translate-x-8 flex flex-col items-center justify-center text-center">
+                            <div class="w-20 h-20 rounded-full border border-brand-gold/30 bg-brand-gold/10 mb-6 flex items-center justify-center text-brand-gold">
+                                <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <h3 class="font-serif text-3xl text-brand-cream mb-4">Profile Analyzed.</h3>
+                            
+                            <!-- Dynamic Recommendation Box -->
+                            <div class="bg-brand-bg border border-brand-gold/30 rounded-xl p-6 mb-8 w-full max-w-sm">
+                                <p class="text-brand-gold text-[0.65rem] tracking-[0.2em] uppercase font-bold mb-2">Initial Recommendation:</p>
+                                <p id="dynamic-recommendation" class="font-serif text-xl text-brand-cream">Therapy & Evaluation</p>
+                            </div>
+
+                            <p class="font-sans text-brand-tan/70 text-sm max-w-sm mx-auto leading-relaxed font-light mb-8">
+                                Our intake team is reviewing your details and will reach out shortly to finalize your custom care plan and schedule your first visit.
+                            </p>
+                            <button onclick="resetQuiz()" class="text-brand-gold text-xs font-bold uppercase tracking-widest hover:text-brand-cream transition-colors">
+                                Restart Intake
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-[#050505] py-16 border-t border-brand-border text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="font-serif font-bold text-xl tracking-[0.1em] leading-none text-brand-cream uppercase mb-2">Be Fehr</h2>
+                <p class="text-[0.7rem] tracking-[0.25em] font-medium text-brand-gold uppercase mb-8">Clinic</p>
+                
+                <div class="flex justify-center gap-6 mb-8 text-brand-tan/50 font-sans text-sm flex-wrap">
+                    <a href="#services" class="hover:text-brand-gold transition-colors">Care & Services</a>
+                    <a href="#" class="hover:text-brand-gold transition-colors">About Us</a>
+                    <a href="#" class="hover:text-brand-gold transition-colors">Patient Portal</a>
+                    <a href="#" class="hover:text-brand-gold transition-colors">PharmCo</a>
+                </div>
+
+                <p class="font-sans text-sm text-brand-tan/40 mb-4 font-light">Fort Lauderdale, FL • 954-600-0551</p>
+                <p class="font-sans text-[0.7rem] text-brand-tan/20">&copy; 2026 Be Fehr Clinic. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // Store user selections internally for the dynamic recommendation
+        const quizData = {
+            focus: '',
+            severity: '',
+            history: '',
+            format: ''
+        };
+
+        // Master function to handle perfect, bug-free slide transitions
+        function goToStep(toStep, fromStep) {
+            const currentPanel = document.getElementById('quiz-step-' + fromStep);
+            const targetPanel = document.getElementById('quiz-step-' + toStep);
+            const progressBar = document.getElementById('quiz-progress');
+            
+            // Update Progress Bar (6 steps total)
+            const progress = (toStep / 6) * 100;
+            progressBar.style.width = `${progress}%`;
+
+            // Step 1: Slide Current Panel Out
+            currentPanel.classList.remove('opacity-100', 'z-10', 'translate-x-0');
+            currentPanel.classList.add('opacity-0', 'pointer-events-none');
+            
+            // Slide direction based on forward vs back
+            if(toStep > fromStep) {
+                currentPanel.classList.add('-translate-x-8');
+            } else {
+                currentPanel.classList.add('translate-x-8');
+            }
+            
+            // Wait for CSS transition
+            setTimeout(() => {
+                targetPanel.classList.remove('-translate-x-8', 'translate-x-8');
+                if(toStep > fromStep) {
+                    targetPanel.classList.add('translate-x-8');
+                } else {
+                    targetPanel.classList.add('-translate-x-8');
+                }
+                
+                void targetPanel.offsetWidth; // reflow
+                
+                targetPanel.classList.remove('opacity-0', 'pointer-events-none', '-translate-x-8', 'translate-x-8');
+                targetPanel.classList.add('opacity-100', 'z-10', 'translate-x-0', 'pointer-events-auto');
+            }, 300); 
+        }
+
+        // Handle the option selection effect and save data
+        function selectOption(button, currentStep, nextStep, category, value) {
+            if(button.classList.contains('locked')) return;
+            
+            // Save data for analysis
+            quizData[category] = value;
+
+            const allButtons = button.parentElement.querySelectorAll('button');
+            
+            allButtons.forEach(btn => {
+                btn.classList.remove('border-brand-gold', 'bg-brand-gold/10');
+                btn.classList.add('border-brand-border', 'bg-brand-bg', 'locked');
+                btn.querySelector('.indicator').innerHTML = ''; 
+            });
+
+            button.classList.remove('border-brand-border', 'bg-brand-bg');
+            button.classList.add('border-brand-gold', 'bg-brand-gold/10');
+            
+            button.querySelector('.indicator').innerHTML = `
+                <svg class="w-4 h-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+                </svg>`;
+            
+            setTimeout(() => {
+                goToStep(nextStep, currentStep);
+                setTimeout(() => {
+                    allButtons.forEach(btn => btn.classList.remove('locked'));
+                }, 400);
+            }, 400); 
+        }
+
+        // Final submission step simulating a clinical data analysis
+        function submitQuiz() {
+            const btn = document.getElementById('submit-btn');
+            
+            // Lock button and show loading spinner
+            btn.classList.add('opacity-75', 'cursor-not-allowed');
+            btn.innerHTML = `
+                <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-brand-bg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Analyzing Profile...
+            `;
+
+            // Calculate Dynamic Recommendation based on their path
+            let recommendation = "Therapy & Evaluation"; // default
+            
+            if (quizData.history === 'Meds and Therapy' && (quizData.focus === 'Anxiety & Mood' || quizData.focus === 'Trauma')) {
+                recommendation = "Psychiatry & Spravato® Eval";
+            } else if (quizData.focus === 'Testing & Wellness') {
+                recommendation = "Wellness, STI & PrEP Testing";
+            } else if (quizData.focus === 'Trauma') {
+                recommendation = "Specialized EMDR Therapy";
+            }
+
+            document.getElementById('dynamic-recommendation').innerText = recommendation;
+
+            // Simulate network delay then advance to Step 6
+            setTimeout(() => {
+                goToStep(6, 5);
+            }, 1800);
+        }
+
+        // Allow user to reset the quiz
+        function resetQuiz() {
+            const btn = document.getElementById('submit-btn');
+            btn.classList.remove('opacity-75', 'cursor-not-allowed');
+            btn.innerHTML = 'Analyze My Profile';
+
+            const inputs = document.querySelectorAll('#quiz-step-5 input');
+            inputs.forEach(input => input.value = '');
+
+            const optionButtons = document.querySelectorAll('#quiz-section button.group');
+            optionButtons.forEach(btn => {
+                btn.classList.remove('border-brand-gold', 'bg-brand-gold/10');
+                btn.classList.add('border-brand-border', 'bg-brand-bg');
+                btn.querySelector('.indicator').innerHTML = '';
+            });
+
+            // Reset internal data
+            quizData.focus = '';
+            quizData.severity = '';
+            quizData.history = '';
+            quizData.format = '';
+
+            goToStep(1, 6);
+        }
+    </script>
+</body>
+</html>
